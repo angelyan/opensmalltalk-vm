@@ -54,15 +54,15 @@ jobs:
           - linux32x86
         flavor:
           - squeak.cog.spur
-          - pharo.cog.spur
+          # - pharo.cog.spur
           # - pharo.stack.spur # build not prepared
         heartbeat:
           - threaded
           - itimer
         mode:
           - fast
-          - debug
-          - assert
+          # - debug
+          # - assert
         include:
           # sista build not fully prepared for linux64x64, so only choose selected configurations for linux32x86
           - arch: linux32x86

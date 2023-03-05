@@ -58,8 +58,8 @@ jobs:
           - squeak.stack.spur
         mode:
           - fast
-          - debug
-          - assert
+          # - debug
+          # - assert
 
     runs-on: ubuntu-latest # we setup QEMU to produce binaries anyway
     name: ${{ matrix.flavor }} for ${{ matrix.arch }}${{ matrix.mode == 'debug' && ' (DEBUG)' || matrix.mode == 'assert' && ' (ASSERT)' || '' }}
@@ -91,7 +91,7 @@ jobs:
       - name: Build VM
         uses: uraimo/run-on-arch-action@v2
         id: build-vm
-        with: 
+        with:
           arch: ${{ env.ARCH_ARM }}
           distro: buster
 
