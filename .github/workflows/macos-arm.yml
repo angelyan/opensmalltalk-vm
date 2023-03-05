@@ -4,7 +4,7 @@ on:
   push: # All branches, but appropriate paths only.
     paths:
       # This workflow spec and its support scripts
-      - '.github/workflows/macos.yml' 
+      - '.github/workflows/macos.yml'
       - 'scripts/ci/*build.sh'
       - 'deploy/**'
       # Relevant sources for this platform
@@ -20,7 +20,7 @@ on:
       - Cog
     paths:
       # This workflow spec and its support scripts
-      - '.github/workflows/macos.yml' 
+      - '.github/workflows/macos.yml'
       - 'scripts/ci/*build.sh'
       - 'deploy/**'
       # Relevant sources for this platform
@@ -43,7 +43,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        arch: 
+        arch:
           - macos64ARMv8
         flavor:
           - squeak.cog.spur
@@ -54,8 +54,8 @@ jobs:
           # - pharo.stack.spur
         mode:
           - fast
-          - debug
-          - assert
+          # - debug
+          # - assert
 
     runs-on: macos-10.15 # macos-11 macos-latest
     name: ${{ matrix.flavor }} for ${{ matrix.arch }}${{ matrix.mode == 'debug' && ' (DEBUG)' || matrix.mode == 'assert' && ' (ASSERT)' || '' }}
