@@ -48,7 +48,7 @@ jobs:
       matrix:
         arch:
           - win64x64
-          - win32x86
+          # - win32x86
         flavor:
           - squeak.cog.spur
           - squeak.stack.spur
