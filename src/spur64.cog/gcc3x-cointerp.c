@@ -1,9 +1,9 @@
 /* This file has been post-processed for GNU C */
 
 
-/* Automatically generated from Squeak on {5 March 2023 . 3:24:11 pm} */
+/* Automatically generated from Squeak on {7 March 2023 . 11:16:08 pm} */
 
-static char __buildInfo[] = "Generated on {5 March 2023 . 3:24:11 pm}. Compiled on "__DATE__ ;
+static char __buildInfo[] = "Generated on {7 March 2023 . 11:16:08 pm}. Compiled on "__DATE__ ;
 char *__interpBuildInfo = __buildInfo;
 
 
@@ -2678,7 +2678,7 @@ sqInt debugCallbackInvokes;
 sqInt debugCallbackReturns;
 sqInt cannotDeferDisplayUpdates;
 sqInt checkedPluginName;
-const char *interpreterVersion = "Open Smalltalk Cog[Spur] VM [ 5 March 2023]";
+const char *interpreterVersion = "Open Smalltalk Cog[Spur] VM [ 7 March 2023]";
 sqInt minBackwardJumpCountForCompile = MinBackwardJumpCountForCompile /* 40 */;
 int displayWidth;
 int displayDepth;
@@ -25217,7 +25217,7 @@ printFrameWithSP(char *theFP, char *theSP)
     usqInt index;
     sqInt methodField;
     usqInt numArgs;
-    sqInt numTemps;
+    usqInt numTemps;
     char *rcvrAddress;
     sqInt rcvrOrClosure;
     CogBlockMethod * self_in_cmHomeMethod;
@@ -67530,7 +67530,7 @@ updatePointersInsavedFirstFieldPointer(sqInt obj, sqInt firstFieldPtr)
 			assert((ReceiverIndex + ((sp >> 3))) < (lengthOf(obj)));
 			contextSize = (sp >> 3);
 	l6:	/* end fetchStackPointerOf: */;
-			numPointerSlots = ((usqInt) (CtxtTempFrameStart + contextSize));
+			numPointerSlots = CtxtTempFrameStart + contextSize;
 			goto l10;
 		}
 		/* begin numSlotsOf: */
@@ -67560,7 +67560,7 @@ updatePointersInsavedFirstFieldPointer(sqInt obj, sqInt firstFieldPtr)
 	/* begin literalCountOfMethodHeader: */
 	assert((((header) & 7) == 1));
 	numLiterals = ((header >> 3)) & AlternateHeaderNumLiteralsMask;
-	numPointerSlots = ((usqInt) (numLiterals + LiteralStart));
+	numPointerSlots = numLiterals + LiteralStart;
 	l10:	/* end numPointerSlotsWhileCompactingOf:withFormat:savedFirstFieldPointer: */;
 	if ((fmt <= 5 /* lastPointerFormat */)
 	 && (numPointerSlots > 0)) {
@@ -71893,8 +71893,8 @@ static sqInt
 getErrorObjectFromPrimFailCode(void)
 {   DECL_MAYBE_SQ_GLOBAL_STRUCT
     sqInt classIndex;
-    sqInt clone;
-    sqInt errObj;
+    usqInt clone;
+    usqInt errObj;
     sqInt fieldIndex;
     sqInt i;
     usqInt newObj;

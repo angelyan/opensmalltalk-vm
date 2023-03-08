@@ -1,6 +1,6 @@
-/* Automatically generated from Squeak on {5 March 2023 . 3:24:16 pm} */
+/* Automatically generated from Squeak on {7 March 2023 . 11:16:12 pm} */
 
-static char __buildInfo[] = "Generated on {5 March 2023 . 3:24:16 pm}. Compiled on "__DATE__ ;
+static char __buildInfo[] = "Generated on {7 March 2023 . 11:16:12 pm}. Compiled on "__DATE__ ;
 char *__cogitBuildInfo = __buildInfo;
 
 
