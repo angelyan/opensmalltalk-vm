@@ -19,6 +19,7 @@ on:
   pull_request:
     branches:
       - Cog
+      - oscog-eem-3305
     paths:
       # This workflow spec and its support scripts
       - '.github/workflows/win.yml'
